@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+artist = Artist.create(name: "Mumford and Sons")
+a = Album.create(name: "Wilder Mind", artist_id: artist.id)
+
+s1 = Song.create(name: "Monster", album_id: a.id)
+s2 = Song.create(name: "Believe", album_id: a.id)
