@@ -3,19 +3,18 @@
 <div class="row">
 	
 	<div>
-		<div class="form-group">
-		  <input type="text" id="search-artist" class="form-control" placeholder="Artist Name" aria-describedby="basic-addon1" name="artist">
-		</div>
+		<%= form_for @search, :remote => true, :url => search_index_path(@search), method: :get, html: {id: "search-form"} do |search| %>
+			<%= search.label :song_title %>
+			<%= search.text_field :song_title, :class => "form-control" %>
 
-		<div class="form-group">
-		  <input type="text" id="search-song" class="form-control" placeholder="Song Title" aria-describedby="basic-addon1">
-		</div>
+			<%= search.label :album_title %>
+			<%= search.text_field :album_title, :class => "form-control" %>
 
-		<div class="form-group">
-		  <input type="text" id="search-album" class="form-control" placeholder="Artist Title" aria-describedby="basic-addon1">
-		</div>
+			<%= search.label :artist_name %>
+			<%= search.text_field :artist_name, :class => "form-control" %>
 
-		<button id="search-submit" class="btn btn-default">Search</button>
+			<%= button_to "Search", :action => :index ,:method => :get, remote: true %>
+		<% end %>
 	</div>
 	
 	<h3>Search Results</h3>
