@@ -4,7 +4,6 @@ class CreateSearches < ActiveRecord::Migration[5.0]
       t.string :song_title
       t.string :album_title
       t.string :artist_name
-      t.references :searchable, polymorphic: true, index: true
       t.timestamps
     end
   end

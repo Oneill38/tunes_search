@@ -31,11 +31,8 @@ ActiveRecord::Schema.define(version: 20161107153154) do
     t.string   "song_title"
     t.string   "album_title"
     t.string   "artist_name"
-    t.string   "searchable_type"
-    t.integer  "searchable_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.index ["searchable_type", "searchable_id"], name: "index_searches_on_searchable_type_and_searchable_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "songs", force: :cascade do |t|
