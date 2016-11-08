@@ -1,8 +1,8 @@
-<h1>Search</h1>
+<h1 class="search-title">Search</h1>
 
 <div class="row">
 	
-	<div>
+	<div class="col-sm-12">
 		<%= form_for @search, :remote => true, :url => search_index_path(@search), method: :get, html: {id: "search-form"} do |search| %>
 			<%= search.label :song_title %>
 			<%= search.text_field :song_title, :class => "form-control" %>
@@ -17,9 +17,9 @@
 		<% end %>
 	</div>
 	
-	<h3>Search Results</h3>
+	<h3 class="results-title">Search Results</h3>
 
-	<div class="results-area">
+	<div class="results-area col-sm-12">
 
 	</div>
 	

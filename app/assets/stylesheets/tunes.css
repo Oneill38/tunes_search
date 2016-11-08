@@ -1,0 +1,12 @@
+.results-div{
+	border-bottom: 1px solid black;
+	padding: 10px;
+}
+
+.results-div ul{
+	list-style-type: none;
+}
+
+.results-title, .search-title{
+	text-align: center;
+}

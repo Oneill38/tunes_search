@@ -12,6 +12,6 @@
 [] DB clean after tests
 [] Before tests, seed it
 [x] Setup AJAX call
-[] Structure Search Call
-[] Style Form
-[] Style Results
+[x] Structure Search Call
+[x] Style Form
+[x] Style Results

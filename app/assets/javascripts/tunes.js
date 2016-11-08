@@ -4,7 +4,7 @@ $(document).ready(function(){
 	  data = JSON.parse(xhr.responseText);
 	  
 	  $.each(data, function(d,results){
-	  	$(".results-area").append("<div><h4>" + results.song_title + "</h4></div>");
+	  	$(".results-area").append("<div class='results-div'><ul><li>Song Title: " +  results.song_title + "</li><li>Album Title: " + results.album_title + "</li><li>Artist: " + results.artist_name + "</li></ul></div>");
 	  });
 	
 
