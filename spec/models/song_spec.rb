@@ -1,11 +1,14 @@
 RSpec.describe Song, type: :model do
-	a = Artist.create(name: "Wild Child")
-	album = Album.create(name: "Wild Child", artist_id: a.id)
-	s = Song.create(name: "Break Bones", album_id: album.id)
-	s2 = Song.create(name: "Bullets", album_id: album.id)
+	
+	before(:each) do
+    	build(:artist)
+    	build(:album)
+    	build(:song)
+  	end
 
 	it "should belong to an album" do
-		expect(s.album.name).to eq("Wild Child")
+		s = build(:song, name: "Tompkins Square Park")
+		expect(s.album.name).to eq("Babel")
 	end
 
 end

@@ -1,9 +1,14 @@
 RSpec.describe Artist, type: :model do
-	bIver = Artist.create(name: "Bon Iver")
+	
+	before(:each) do
+    	build(:artist)
+    	build(:album)
+    	build(:song)
+  	end
 
 	it "should have a unique name" do
-		bi = Artist.create(name: "Bon Iver")
-		expect(bi.id).to eq(nil)
+		artist = build(:artist)
+		expect(artist.id).to eq(nil)
 	end
 
 end
