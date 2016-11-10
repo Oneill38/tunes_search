@@ -8,9 +8,9 @@
 
 ## To-Do
 [x] Base Models and Associations
-[] Seed from ITunes api
-[] DB clean after tests
-[] Before tests, seed it
+[x] Seed from ITunes api
+[x] DB clean after tests
+[x] Before tests, seed it
 [x] Setup AJAX call
 [x] Structure Search Call
 [x] Style Form

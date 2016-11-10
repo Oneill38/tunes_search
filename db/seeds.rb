@@ -6,8 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-artist = Artist.create(name: "Mumford and Sons")
-a = Album.create(name: "Wilder Mind", artist_id: artist.id)
+i = ItunesApi.new
 
-s1 = Song.create(name: "Monster", album_id: a.id)
-s2 = Song.create(name: "Believe", album_id: a.id)
+i.create_profile("Mumford and Sons")
+i.create_profile("The Lumineers")
+i.create_profile("Fleetwood Mac")
+i.create_profile("Bon Iver")
+i.create_profile("Lord Huron")
+i.create_profile("Two Door Cinema Club")
+i.create_profile("Glass Animals")
+i.create_profile("River Whyless")
+i.create_profile("Jack Garratt")
+i.create_profile("Hozier")
+i.create_profile("Oh Wonder")

@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
 	$('#search-form').on('ajax:complete', function(event, xhr, status, error) {
+	  $(".results-area").empty();
+	  
 	  data = JSON.parse(xhr.responseText);
 	  
 	  $.each(data, function(d,results){
