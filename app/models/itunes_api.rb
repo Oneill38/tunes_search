@@ -9,7 +9,7 @@ class ItunesApi
 
 		better_response["results"].each do |x|
 			a = Album.where(name: x["collectionName"], artist_id: artist.id).first_or_create
-			Song.create(name: x["tackName"], album_id: a.id)
+			Song.create(name: x["trackName"], album_id: a.id)
 		end
 
 	end
